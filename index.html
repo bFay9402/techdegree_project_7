@@ -4,151 +4,252 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
-  <title>WebApp Dashboard</title>
+  <title>YourApp Dashboard</title>
 </head>
-<body class="grid-container">
-  <header>
-    <h1>YourApp</h1>
-    <div>
-      <!-- svg icon -->
-      <!-- div notifications container -->
-    </div>
-    <img src="" alt="">
-    <h3>Bryan Fay</h3>
-  </header>
-
-  <nav>
-    <a href="">
-      <img src="" alt="">
-    </a>
-  </nav>
-
-  <main>
-    <div class="main-header">
-      <h2 class="headline">Dashboard</h2>
-      <div class="main-header-search">
-        <input type="search" placeholder="Search...">
+<body>
+  <div class="container">
+    <header>
+      <h1><span class="bold">Your</span>App<span class="sup">TM</span></h1>
+      <div class="user">
+        <!-- <img class="header-icon" src="./icons/icon-bell.svg" alt="bell icon"> -->
       </div>
-    </div>
-
-    <div class="alert" id="alert">
-
-    </div>
-
-    <section class="traffic">
-      <div class="traffic-header">
-        <h3>Traffic</h3>
-        <ul class="traffic-nav">
-          <li class="traffic-nav-link">Hourly</li>
-          <li class="traffic-nav-link">Daily</li>
-          <li class="traffic-nav-link">Weekly</li>
-          <li class="traffic-nav-link">Monthly</li>
-        </ul>
+      <div class="user-avatar">
+        <!-- <img class="profile" src="" alt=""> -->
+        <p class="user-name">Bryan Fay</p>
       </div>
+    </header>
 
-      <div class="widget-container-full">
-        <canvas id="traffic-chart"></canvas>
-      </div>
+    <nav>
+      <!-- <div class="active"><img class="nav-icon" src="./icons/icon-dashboard.svg" alt="dashboard icon"></div>
+      <div><img class="nav-icon" src="./icons/icon-members.svg" alt="dashboard icon"></div>
+      <div><img class="nav-icon" src="./icons/icon-visits.svg" alt="dashboard icon"></div>
+      <div><img class="nav-icon" src="./icons/icon-settings.svg" alt="dashboard icon"></div> -->
+    </nav>
 
-    </section>
-
-    <section class="daily">
-      <h3>Daily Traffic</h3>
-
-      <div class="widget-container-half">
-        <canvas id="daily-chart"></canvas>
-      </div>
-
-    </section>
-
-    <div class="social-container">
-      <div class="social-img">
-
-      </div>
-
-      <div class="social-text">
-        <p>Twitter</p>
-        <p>10,345</p>
-      </div>
-
-      <div class="social-img">
-
-      </div>
-
-      <div class="social-text">
-        <p>Facebook</p>
-        <p>8,739</p>
-      </div>
-
-      <div class="social-img">
-
-      </div>
-
-      <div class="social-text">
-        <p>Google+</p>
-        <p>2,530</p>
-      </div>
-
-    </div>
-
-    <section class="members">
-      <h3>New Members</h3>
-
-      <div class="members-container">
-        <img src="" alt="">
-
-        <div class="members-text">
-          <p>Victoria Chambers</p>
-          <a href="#">victoria.chambers80@example.com</a>
+    <main>
+      <div class="dashboard">
+        <div class="db-container">
+          <h2>Dashboard</h2>
+          <div class="dashboard-search-bg">
+            <input class="dashboard-search" name="dashboard-search" type="search" placeholder="Search">
+            <div class="mag-bg">
+              <!-- <img class="search-icon" src="icons/mag-glass.svg" alt="magnifying glass icon"> -->
+            </div>
+          </div>
         </div>
-        <p>10/15/15</p> 
-      </div>
-    </section>
-    
-    <section class="activity">
-      <h3>Recent Activity</h3>
-
-      <div class="activity-container">
-        <img src="" alt="">
-
-        <div class="activity-text">
-          <p>Victoria Chambers commented on YourApp's SEO Tips</p>
-          <p>4 hours ago</p>
+        <div class="alert-container">
+          <div class="alert">
+            <p><strong>Alert</strong> - This is your alert message!</p>
+            <button class="btn-alert-x">&times;</button>
+          </div>
         </div>
-        <p>></p>
       </div>
-    </section>
 
-    <section class="message">
-      <h3>Message User</h3>
-
-      <form class="widget-container">
-        <input type="text" placeholder="Search for user" class="form-field" id="userField">
-        <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
-        <button class="button-primary" id="send">Send</button>
-      </form>
-    </section>
-
-    <section class="settings">
-      <h3>Settings</h3>
-
-      <!-- custom toggle CSS -->
-      
-      <!-- custom toggle CSS -->
-
-      <select class="form-field" id="timezone">
-        <option disabled selected>Select a Timezone</option>
-        <option>Eastern</option>
-        <option>Central</option>
-        <option>Pacific</option>
-      </select>
-
-      <div class="settings-button">
-        <button class="button-primary" id="save">Save</button>
-        <button class="button-disabled" id="cancel">Cancel</button>
+      <div class="traffic widget">
+        <h3>Web Traffic</h3>
+        <div class="time-interval">
+          <div class="hourly">
+            <h4>Hourly</h4>
+          </div>
+          <div class="daily">
+            <h4>Daily</h4>
+          </div>
+          <div class="weekly">
+            <h4>Weekly</h4>
+          </div>
+          <div class="monthly">
+            <h4>Monthly</h4>
+          </div>
+        </div>
+        <!-- <canvas id="traffic"></canvas> -->
       </div>
-    </section>
-  </main>
+
+      <div class="daily-traffic widget">
+        <h3>Daily Traffic</h3>
+        <!-- <canvas id="daily-traffic"></canvas> -->
+      </div>
+
+      <div class="mobile-users widget">
+        <h3>Mobile Users</h3>
+        <!-- <canvas id="mobile-users"></canvas> -->
+      </div>
+
+      <div class="social-stats widget">
+        <h3>Social Stats</h3>
+        <div class="card-container">
+          <div class="social-card">
+            <div class="social-icon">
+              <!-- <img src="./icons/icon-twitter.svg" alt=""> -->
+            </div>
+            <div class="social-results">
+              <h3>Twitter</h3>
+              <p>10,345</p>
+            </div>
+          </div>
+          <div class="social-card">
+            <div class="social-icon">
+              <!-- <img src="./icons/icon-facebook.svg" alt=""> -->
+            </div>
+            <div class="social-results">
+              <h3>Facebook</h3>
+              <p>8,739</p>
+            </div>
+          </div>
+          <div class="social-card">
+            <div class="social-icon">
+              <!-- <img src="./icons/icon-google-plus.svg" alt=""> -->
+            </div>
+            <div class="social-results">
+              <h3>Google&plus;</h3>
+              <p>2,530</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="new-members widget">
+        <h3>New Members</h3>
+        <div class="member-card">
+          <img class="profile-pic" src="images/member-1.jpg" alt="member1 profile pic">
+          <div class="member-info">
+            <div class="name-address">
+              <h4>Victoria Chambers</h4>
+              <p>victoria.chambers80@example.com</p>
+            </div>
+            <div class="member-date">
+              <h4>10/15/15</h4>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="member-card">
+          <img class="profile-pic" src="images/member-2.jpg" alt="member1 profile pic">
+          <div class="member-info">
+            <div class="name-address">
+              <h4>Dale Byrd</h4>
+              <p>dale.byrd52@example.com</p>
+            </div>
+            <div class="member-date">
+              <h4>10/15/15</h4>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="member-card">
+          <img class="profile-pic" src="images/member-3.jpg" alt="member1 profile pic">
+          <div class="member-info">
+            <div class="name-address">
+              <h4>Dawn Wood</h4>
+              <p>dawnwood16@example.com</p>
+            </div>
+            <div class="member-date">
+              <h4>10/15/15</h4>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="member-card">
+          <img class="profile-pic" src="images/member-4.jpg" alt="member1 profile pic">
+          <div class="member-info">
+            <div class="name-address">
+              <h4>Dan Oliver</h4>
+              <p>danoliver82@example.com</p>
+            </div>
+            <div class="member-date">
+              <h4>10/15/15</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="recent-activity widget">
+        <h3>Recent Activity</h3>
+        <div class="activity-card">
+          <div class="activity-info">
+            <img class="profile-pic" src="images/member-1.jpg" alt="member1 profile pic">
+            <div class="comment-time">
+              <p>Victoria Chambers commented on YourApp's SEO Tips</p>
+              <p class="time">4 hours ago</p>
+            </div>
+          </div>
+          <div class="right-angle">&rang;</div>
+        </div>
+        <hr>
+        <div class="activity-card">
+          <div class="activity-info">
+            <img class="profile-pic" src="images/member-2.jpg" alt="member1 profile pic">
+            <div class="comment-time">
+              <p>Dale Byrd likes the post Facebook's changes for 2018</p>
+              <p class="time">5 hours ago</p>
+            </div>
+          </div>
+          <div class="right-angle">&rang;</div>
+        </div>
+        <hr>
+        <div class="activity-card">
+          <div class="activity-info">
+            <img class="profile-pic" src="images/member-3.jpg" alt="member1 profile pic">
+            <div class="comment-time">
+              <p>Dawn Wood commented on Facebook's changes for 2018</p>
+              <p class="time">5 hours ago</p>
+            </div>
+          </div>
+          <div class="right-angle">&rang;</div>
+        </div>
+        <hr>
+        <div class="activity-card">
+          <div class="activity-info">
+            <img class="profile-pic" src="images/member-4.jpg" alt="member1 profile pic">
+            <div class="comment-time">
+              <p>Dan Oliver posted on YourApp's SEO Tips</p>
+              <p class="time">1 day ago</p>
+            </div>
+          </div>
+          <div class="right-angle">&rang;</div>
+        </div>
+      </div>
+
+      <div class="message-user widget">
+        <h3>Message User</h3>
+        <form class="user-fields">
+          <input class="user-search" name="user-search" type="search" placeholder="Search for User">
+          <textarea class="user-message" name="user_message" placeholder="Message for User"></textarea>
+          <button class="message-user-send" name="message-user-send" type="submit" value="submit">Send</button>
+        </form>
+      </div>
+
+      <div class="settings widget">
+        <h3>Settings</h3>
+        <div class="message-fields">
+          <div class="toggles">
+            <h3>Send Email Notifications</h3>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="toggles">
+            <h3>Set Profile To Public</h3>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <select name="timezones" class="timezones">
+            <option selected disabled>Select Your Time Zone</option>
+            <option>EST</option>
+            <option>CST</option>
+            <option>PST</option>
+          </select>
+          <div class="buttons">
+            <button class="settings-save" name="settings-save" type="submit">Save</button>
+            <button class="settings-cancel" name="settings-cancel" type="button">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
